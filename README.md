@@ -5,13 +5,16 @@ This module is a short introduction to the [National Center for Biotechnology In
 An outline for the module is below:
 
   * [What is the NCBI?](#what-is-the-ncbi)
+    * [Challenge #1](#challenge-1)
   * [What is BLAST?](#what-is-blast)
   * [How does BLAST work?](#how-does-blast-work)
   * [For what purposes would you use BLAST?](#for-what-purposes-would-you-use-blast)
   * [Let's BLAST something!](#lets-blast-something)
     * [Example One: Find a transgene in the papaya genome](#find-a-transgene-in-the-papaya-genome)
+      * [Challenge #2](#challenge-2)
     * [Example Two: Finding novel sequences](#finding-novel-sequences) 
   * [Designing and validating primers with BLAST](#designing-and-validating-primers-with-blast)
+    * [Challenge #3](#challenge-3)
 
 ***
 
@@ -56,11 +59,11 @@ These different databases are all linked together by the [Entrez](https://en.wik
 </kbd>
 </p>
 
-As shown above: the query returned a rich selection of results that could be used to answer a variety of different scientific questions. If we were interested in DNA or RNA sequences, we would find them in the **Nucleotide* database. If we were looking for human variations of the gene, we'd be able to find this in the **SNP** (Single Nucleotide Polymorphisms) database, and so on. This kind of information retrieval is only possible because of the unified structures that exist between the databases and the Entrez search engine. 
+As shown above: the query returned a rich selection of results that could be used to answer a variety of different scientific questions. If we were interested in DNA or RNA sequences, we would find them in the **Nucleotide** database. If we were looking for human variations of the gene, we'd be able to find this in the **SNP** (Single Nucleotide Polymorphisms) database, and so on. This kind of information retrieval is only possible because of the unified structures that exist between the databases and the Entrez search engine. 
 
 ***
 
-## CHALLENGE
+## EXAMPLE
 
 Search for the gene symbol **POMC**, look up information about the gene in *Homo sapiens*, and report three known phenotypic variations associated with this particular gene. 
 
@@ -108,7 +111,6 @@ From James Watson, Nobel laureate and co-discoverer of the structure of DNA:
 >One gene fascinates me: POMC, on chromosome 2, which is a recipe for a protein called ­pro-opiomelanocortin. In the body it gets broken up into different proteins, including melanotropin, which makes the skin darker when you’ve been in the sun, and beta-endorphin, a natural opioid that makes you feel satisfied after eating and also causes the ‘runner’s high.’ It’s the only gene I know whose very structure is an implicit biological message: Happiness is a reward for doing what we should be doing—for being in the sun and making vitamin D, for exercising and for bringing nutrients into our bodies. Eons ago these messages were delivered by the genes of our vertebrate ancestors on this planet. Now they are passed down to us. 
 
 
-***
 
 #### NCBI tools
 
@@ -120,6 +122,18 @@ The tools available on the NCBI website provide users with a wide variety of way
     * This tool allows you to retrieve a set of results from different databases using a list of accession numbers. 
 
 However, the most popular tool by far is BLAST (and its many variations). What BLAST is, how it works, and what it's used for are the topics of the next section.
+
+***
+
+***
+
+##CHALLENGE 1
+
+Search the NCBI databases for the gene *TAS2R38*. In the *Gene* database, find the search results for this gene in *Homo sapiens*. Examine the results, and answer the following questions:
+
+  1. What is the official full name for this gene?
+  2. How many citations for this gene are in PubMed?
+  3. Reading information on this page, what do you think this gene's function is?
 
 ***
 
@@ -257,7 +271,7 @@ If the query sequence aligns well to the library sequence and is deemed to be st
 
 ***
 
-##CHALLENGE
+##EXAMPLE
 
 Using BLOSUM62, find the similarity score of the following sequences:
 
@@ -389,6 +403,15 @@ When it's completed, you'll see your BLAST results.
 Take your time to examine the results page. An area of particular importance is the *Alignments* section. Note that the search has produced multiple alignments, each to different biological samples of *Carica papaya*. You are looking for alignments where as much of the query sequence is aligned as possible. Also note how high the matching scores (for "positives") are: 98-99%. We have thus used a BLAST search to find the transgenic protein that has been inserted into the genome of specific strains of papaya. You could now use the same approximate method to search for known transgenic genes in other genetically modified organisms. 
 
 ***
+
+##CHALLENGE 2
+
+  1. What is the score, in bits, of the first alignment returned (Should be: "Carica papaya DNA, contig: p981&p982amplicon, strain: PRSV-YK")
+  2. What are the starting and ending coordinates of the subject strain of the alignment above?
+
+***
+
+
 
 ###Finding novel sequences
 
@@ -533,3 +556,16 @@ Voila! You have found your sequence. Examining the subject sequence alignment co
 </p>
 
 As you can see, this is a different strain of genetically modified Papaya - a strain called *SunUp*. 
+
+***
+
+##CHALLENGE 3
+
+Return to the NCBI mainpage and search for *Carica papaya* SunUp. Click *Assembly* and use the results to answer the following questions:
+
+  1. What is the total number of chromosomes and plasmids in this genome assembly?
+  2. Who submitted this assembly, and when?
+
+***
+
+
